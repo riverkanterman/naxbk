@@ -4,39 +4,71 @@ import './Quiz.css';
 function Quiz() {
     const questions = [
 		{
-			questionText: 'What is the capital of France?',
+			questionText: 'What type of overdose does Naloxone reverse?',
 			answerOptions: [
-				{ answerText: 'New York', isCorrect: false },
-				{ answerText: 'London', isCorrect: false },
-				{ answerText: 'Paris', isCorrect: true },
-				{ answerText: 'Dublin', isCorrect: false },
+				{ answerText: 'Stimulant', isCorrect: false },
+				{ answerText: 'Alcohol', isCorrect: false },
+				{ answerText: 'Opiate', isCorrect: true },
+				{ answerText: 'All of the above', isCorrect: false },
 			],
 		},
 		{
-			questionText: 'Who is CEO of Tesla?',
+			questionText: 'What is the method of administering Naloxone?',
 			answerOptions: [
-				{ answerText: 'Jeff Bezos', isCorrect: false },
-				{ answerText: 'Elon Musk', isCorrect: true },
-				{ answerText: 'Bill Gates', isCorrect: false },
-				{ answerText: 'Tony Stark', isCorrect: false },
+				{ answerText: 'Nasal Spray', isCorrect: false },
+				{ answerText: 'Intramuscular Injection', isCorrect: false },
+				{ answerText: 'Both', isCorrect: true },
 			],
 		},
 		{
-			questionText: 'The iPhone was created by which company?',
+			questionText: 'Who does 911 Good Samaritan Law protect?',
 			answerOptions: [
-				{ answerText: 'Apple', isCorrect: true },
-				{ answerText: 'Intel', isCorrect: false },
-				{ answerText: 'Amazon', isCorrect: false },
-				{ answerText: 'Microsoft', isCorrect: false },
+				{ answerText: 'The individual overdosing', isCorrect: false },
+				{ answerText: 'The person who calls 911', isCorrect: false },
+				{ answerText: 'Anyone present', isCorrect: false },
+				{ answerText: 'A and B', isCorrect: true },
+                { answerText: 'B and C', isCorrect: false },
+                { answerText: 'All of the above', isCorrect: false },
 			],
 		},
 		{
-			questionText: 'How many Harry Potter books are there?',
+			questionText: 'What are the signs of opiod overdose?',
 			answerOptions: [
-				{ answerText: '1', isCorrect: false },
-				{ answerText: '4', isCorrect: false },
-				{ answerText: '6', isCorrect: false },
-				{ answerText: '7', isCorrect: true },
+				{ answerText: 'Loss of consciousness', isCorrect: false },
+				{ answerText: 'Abnormal breathing', isCorrect: false },
+				{ answerText: 'Blue lips, nails, or skin color', isCorrect: false },
+				{ answerText: 'A and B', isCorrect: false },
+                { answerText: 'B and C', isCorrect: false },
+                { answerText: 'All of the above', isCorrect: true },
+			],
+		},
+        {
+			questionText: 'Can someone be given too much Naloxone?',
+			answerOptions: [
+				{ answerText: 'Yes, but only if they are on opiates', isCorrect: false },
+				{ answerText: 'Yes, but only if they are on stimulants', isCorrect: false },
+				{ answerText: 'Yes, regardless of substance', isCorrect: false },
+				{ answerText: 'No', isCorrect: true },
+			],
+		},
+        {
+			questionText: 'How long should you wait between Naloxone doses if the person is unresponsive?',
+			answerOptions: [
+				{ answerText: '2 minutes', isCorrect: true },
+				{ answerText: '15 minutes', isCorrect: false },
+				{ answerText: '30 minutes', isCorrect: false },
+				{ answerText: '1 hour', isCorrect: false },
+			],
+		},
+        {
+			questionText: 'What should you do after administering Naloxone?',
+			answerOptions: [
+				{ answerText: 'Rescue breathing', isCorrect: false },
+				{ answerText: 'Place person in recovery position', isCorrect: false },
+				{ answerText: 'Call 911', isCorrect: false },
+				{ answerText: 'Give the person water', isCorrect: false },
+                { answerText: 'A, B, and C', isCorrect: true },
+                { answerText: 'All of the above', isCorrect: false },
 			],
 		},
 	];
@@ -70,6 +102,16 @@ function Quiz() {
 	}
 
 	return (
+        <div className='quizimg' style={{
+            backgroundImage: `url('https://i.imgur.com/MfunWH6.jpg')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center',
+            backgroundAttachment: 'fixed',
+            width: '100%',
+            height: '650px',
+			display: 'flex',
+          }}>
+
 		<div className='quiz'>
 			{showScore ? (
 				<div className='score-section'>You scored {score} out of {questions.length} and your acummulated score is {scoreList}
@@ -85,12 +127,13 @@ function Quiz() {
 					</div>
 					<div className='answer-section'>
 						{questions[currentQuestion].answerOptions.map((answerOption) => (
-							<button onClick={() => handleAnswerButton(answerOption.isCorrect)}>{answerOption.answerText}</button>
+							<button className='quiz-button' onClick={() => handleAnswerButton(answerOption.isCorrect)}>{answerOption.answerText}</button>
 						))}
 					</div>
 				</>
 			)}
 		</div>
+        </div>
 	);
 }
 

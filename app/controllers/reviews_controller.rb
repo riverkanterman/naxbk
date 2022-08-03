@@ -24,12 +24,6 @@ class ReviewsController < ApplicationController
             render json: post, status: :accepted
         end
 
-        def destroy
-            review = Review.find_by(id: params[:id])
-            review.destroy
-            head :no_content
-        end
-
         private
 
         def review_params

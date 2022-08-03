@@ -18,18 +18,6 @@ rescue_from ActiveRecord::RecordInvalid, with: :render_invalid
         render json: user, status: :accepted
     end
 
-    def update
-        user = User.find_by!(id: params[:id])
-        user.update!(user_params)
-        render json: user, status: :accepted
-    end
-
-    def destroy
-        user = User.find_by(id: params[:id])
-        user.destroy!
-        head:no_content
-    end
-
     private
     def user_params
         params.permit(:username, :password, :password_confirmation, :id)

@@ -1,0 +1,80 @@
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.frame {
+  border: 10px solid #75a1ff;
+  overflow: hidden;
+}
+
+.box-container {
+  display: flex;
+  width: 700px;
+  height: 400px;
+}
+
+.box {
+  box-sizing: border-box;
+  border: 5px solid #FFF;
+  background: #00E7FF;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-1-container {
+    display: flex;
+    width: 100%;
+    margin-left: 1050px;
+}
+
+
+.button-p {
+  background: rgb(150, 215, 228);
+  color: rgb(32, 34, 55);
+  width: 50px;
+  text-align: center;
+  padding: 10px 20px;
+  margin: 10px;
+  user-select: none;
+  cursor: pointer;
+  
+}
+
+.button-n {
+    background: rgb(150, 215, 228);
+    color: rgb(32, 34, 55);
+    width: 50px;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 10px;
+    user-select: none;
+    cursor: pointer;
+    
+  }
+
+.button-2-container {
+  display: flex;
+}
+
+.button-2 {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  background: #E0E0E0;
+  margin: 6px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.active {
+  background: #999;
+}

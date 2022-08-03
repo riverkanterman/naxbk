@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
+import Location from "./Location"
 import './Map.css';
 
 mapboxgl.accessToken='pk.eyJ1Ijoicml2ZXJrYW50ZXJtYW4iLCJhIjoiY2w2NnZ5MDc1M2V0bzNybGNhcDU3Mjc3dyJ9.tnjv32ys2rS51R0lEp6yfg'
@@ -13,6 +14,7 @@ const Map = () => {
   
     // Initialize map when component mounts
     useEffect(() => {
+
       const map = new mapboxgl.Map({
         container: mapContainerRef.current,
         style: 'mapbox://styles/mapbox/streets-v11',
@@ -20,8 +22,6 @@ const Map = () => {
         zoom: zoom
       });
   
-      // Add navigation control (the +/- zoom buttons)
-      map.addControl(new mapboxgl.NavigationControl(), 'bottom-left');
   
       map.on('move', () => {
         setLng(map.getCenter().lng.toFixed(4));
@@ -35,18 +35,21 @@ const Map = () => {
   
     return (
       <div>
+        <div>
         <div className='sidebarStyle'>
           <div>
             Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
           </div>
         </div>
         <div className='map-container' ref={mapContainerRef} />
+        </div>
+
         <div className='comment-container'>
             <div>
                 <h3>Username</h3>
                 <p>Comment Here</p>
             </div>
-        </div>
+      </div>
       </div>
     );
   };

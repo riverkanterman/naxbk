@@ -1,6 +1,6 @@
 nav {
-  background-color: transparent;
-  width: 1400px;
+  background-color: rgb(198, 216, 246);
+  width: 100%;
   height: 50px;
   display: flex;
   flex: 1 1 auto;
@@ -32,7 +32,7 @@ nav {
   font-weight: 700;
   font-style: normal;
   font-size: 5em;
-  color: rgb(111, 88, 133);
+  color: rgb(77, 172, 235);
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(253, 253, 253);
   padding-top: 1em;
@@ -41,4 +41,53 @@ nav {
 
 .homeimg{
   background-Color: rgb(218, 207, 220);
+}
+
+.login-page-button{
+  background-color: rgb(221, 188, 139);
+  border-radius: 4px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.login-page-button:hover{
+  background-color: rgb(133, 88, 22);
+  border-radius: 4px;
+}
+
+.login {
+  font-size: 30px;
+  background: rgba(233, 203, 175, 0.8);
+  width: 30%;
+  height: auto;
+  margin: auto;
+  margin-top: 50px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+}
+
+.login-head{
+  padding-top: 15px;
+  font-size: 20px;
+}
+
+.login-question{
+  font-size: 12px;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.login-page-login-button{
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.form-container {
+  background-color: rgba(233, 203, 175, 0.6);
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  padding-bottom: 20px;
+  padding-top: 1px;
 }

@@ -12,6 +12,7 @@
     },
     "dependencies": {
         "mapbox-gl": "^2.9.2",
+        "react-awesome-reveal": "^3.8.1",
         "react-router-dom": "^6.3.0"
     }
 }

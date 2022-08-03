@@ -1,25 +1,23 @@
 import React from 'react';
 import NavBar from './NavBar';
+import { Slide } from "react-awesome-reveal";
 
 function Home(){
     return(
         <div className='homeimg' style={{
-            backgroundImage: `url('https://i.imgur.com/msY1hKt.jpg')`,
-            backgroundSize: 'contain',
+            backgroundImage: `url('https://i.imgur.com/MfunWH6.jpg')`,
+            backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center center',
             backgroundAttachment: 'fixed',
-            width: '500%',
-            height: '800px',
-
           }}>
-
+            
             <div className='page-title'>
               <div className='typetext'>
-              Save Lives
-              <br></br>
-              Carry Narcan
+              <h2>Save Lives</h2>
+              <h2>Carry Narcan</h2>
               </div>
+              
               </div>
           </div>
 
