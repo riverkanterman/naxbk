@@ -5,12 +5,19 @@ rescue_from ActiveRecord::RecordInvalid, with: :render_invalid
 
     def index
         locations = Location.all
-        render json: location, status: :ok
+        geojson = Array.new
+        build_geojson(location, geojson)
     end
 
-    def show
-        location = Location.find_by!(id: params[:id])
-        render json: location, status: :ok
+    respond_to do |format|
+        format.html
+        format.json { render json: geojson}
+    end
+
+    def build_geojson(locations, geojson)
+        locations.each do |event|
+            geojson <<GeojsonBuilder.build_location(location)
+        end
     end
 
     private

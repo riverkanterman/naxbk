@@ -22,18 +22,18 @@
 
 .box {
   box-sizing: border-box;
-  border: 5px solid #FFF;
-  background: #00E7FF;
   flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
+  width: 700px;
+  height: 400px;
+  
 }
 
 .button-1-container {
-    display: flex;
-    width: 100%;
-    margin-left: 1050px;
+    display: flex;    
 }
 
 
