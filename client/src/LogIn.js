@@ -1,12 +1,9 @@
 import React, { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom"
-import SignUp from "./SignUp"
 
 function Login( { setCurrentUser }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState('');
-  const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -41,7 +38,7 @@ function Login( { setCurrentUser }) {
 
   function handleGoToSignUp(e) {
     e.preventDefault()
-    window.location.replace("/signup");
+    window.location.replace("/SignUp");
   }
 
   return (
@@ -64,13 +61,10 @@ function Login( { setCurrentUser }) {
         <br></br>
         {username && password ? <button className="button" type="submit">Login</button> : <button>NOT LOGGED IN</button>}
         <br></br>
+        <p className="login-question">New Member?</p>
+        <button type="login-button" onClick={handleGoToSignUp} className="login-page-button">Sign Up Here!</button>
+        {error && <div className="error">{error}</div>}
       </form>
-
-      <NavLink to="/SignUp" style={{ textDecoration: "none" }}>
-        <h3 style={{ textDecoration: "none" }} className="form-label">
-          Create Account
-        </h3>
-      </NavLink>
     </div>
   );
 }

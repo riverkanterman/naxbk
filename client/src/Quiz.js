@@ -79,8 +79,6 @@ function Quiz() {
 
 	const [score, setScore] = useState(0);
 
-	const[scoreList, setScoreList] = useState(0);
-
 	const handleAnswerButton = (isCorrect) => {
 		if(isCorrect === true) {
 			setScore(score +1);
@@ -95,7 +93,6 @@ function Quiz() {
 	}
 
 	const handleResetButton = (score) => {
-		setScoreList(scoreList+score);
 		setCurrentQuestion(0);
 		setShowScore(false);
 		setScore(0);
@@ -114,8 +111,8 @@ function Quiz() {
 
 		<div className='quiz'>
 			{showScore ? (
-				<div className='score-section'>You scored {score} out of {questions.length} and your acummulated score is {scoreList}
-				<button onClick={() => handleResetButton(score)}>Play Again!</button></div>
+				<div className='score-section'>You scored {score} out of {questions.length}
+				<button className="playbutton" onClick={() => handleResetButton(score)}>Play Again!</button></div>
 
 			) : (
 				<>

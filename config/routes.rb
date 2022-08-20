@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   get '/hello', to: 'application#hello_world'
 
-  resources :locations, only: [:index, :show]
+  resources :locations, only: [:index, :show, :update]
   resources :reviews
   resources :users, only: [:index, :create, :update, :destroy]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

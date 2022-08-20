@@ -11,7 +11,7 @@ function Signup( { setCurrentUser }) {
 
     function handleSubmit(e) {
         e.preventDefault()
-        fetch("/users", {
+        fetch("/signup", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -42,6 +42,14 @@ function Signup( { setCurrentUser }) {
     }
 
     return (
+        <div>
+            <div className='signupimg' style={{
+            backgroundImage: `url('https://i.imgur.com/MfunWH6.jpg')`,
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center center',
+            backgroundAttachment: 'fixed',
+          }}></div>
         <div className='signup'>
             <button onClick={handleBack} className="login-page-button"> Already a user? Log in here </button>
             <h1 className="signup-text">Sign Up</h1>
@@ -77,6 +85,7 @@ function Signup( { setCurrentUser }) {
                 <br></br>
                 {error && <div className="error">{error.join(", ")}</div>}
             </form>
+        </div>
         </div>
     );
 }

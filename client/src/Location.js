@@ -1,22 +1,17 @@
 import React, { useEffect, useState } from 'react';
 
 const Location = () => {
-
-    const locationLat = location.latitude
-    const locationLong = location.longitude
-
-    const [showLocations, setShowLocations] = useState([]);
-    const [showCoord, setShowCoord] = useState([]);
+    const [showLocations, setShowLocations] = useState([]);;
 
     useEffect(() => {
-        fetch('http://localhost:3000/locations', {
+        fetch('/locations', {
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         }
       })
         .then(resp => resp.json())
-        .then(locations=> setLocations(locations))
+        .then(locations=> setShowLocations(locations))
     }, [])
 
 }

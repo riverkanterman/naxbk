@@ -8,13 +8,13 @@
     width: 100%;
     min-height: 400px;
     height: min-content;
-    border-radius: 15px;
     padding: 20px;
     display: flex;
     justify-content: space-evenly;
     margin-left: 300px;
     margin-right: 300px;
     margin-top: 20px;
+    border: 2px solid white;
   }
   
   .score-section {
@@ -91,4 +91,17 @@
   
   .quiz-button svg {
     margin-right: 5px;
+  }
+
+  .playbutton{
+    align-items: center;
+    color: #ffffff;
+    background-color: #b477a6;
+    border-radius: 15px;
+    display: flex;
+    padding: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    
+
   }

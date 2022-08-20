@@ -43,25 +43,25 @@ nav {
 }
 
 .login-page-button{
-  background-color: rgb(221, 188, 139);
+  background-color: rgb(198, 216, 246);
   border-radius: 4px;
   font-size: 12px;
   margin-bottom: 10px;
 }
 
 .login-page-button:hover{
-  background-color: rgb(133, 88, 22);
+  background-color:  rgb(198, 216, 246);
   border-radius: 4px;
 }
 
 .login {
-  font-size: 30px;
-  background: rgba(233, 203, 175, 0.8);
+  font-size: 20px;
+  background-color:  rgb(198, 216, 246);
   width: 30%;
   height: auto;
   margin: auto;
   margin-top: 50px;
-  padding-bottom: 20px;
+  padding: 20px;
   border-radius: 10px;
 }
 
@@ -82,11 +82,34 @@ nav {
 }
 
 .form-container {
-  background-color: rgba(233, 203, 175, 0.6);
+  background-color: rgb(198, 216, 246);
   width: 35%;
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px;
   padding-bottom: 20px;
   padding-top: 1px;
+}
+
+.signup {
+  font-size: 20px;
+  background:rgb(198, 216, 246);
+  width: 30%;
+  height: auto;
+  margin: auto;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.signup-text {
+  margin: 0;
+  font-size: 11px;
+  padding-bottom: 5px;
+}
+
+.signup-welcome-text {
+  padding-top: 20px;
+  margin: 0;
+  font-size: 15px;
 }
