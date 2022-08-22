@@ -13,7 +13,7 @@ const Map = () => {
     const [lat, setLat] = useState(40.6454);
     const [zoom, setZoom] = useState(11.16);
 
-    const [selectedLocation, setLocation] = useState(null);
+    //const [selectedLocation, setLocation] = useState(null);
   
     // Initialize map when component mounts
     useEffect(() => {
@@ -32,10 +32,11 @@ const Map = () => {
         setZoom(map.getZoom().toFixed(2));
       });
 
-      map.featureLayer.on('ready', () => {
+      /*map.featureLayer.on('ready', () => {
         getLocations.map();
       })
-  
+      */
+     
       // Clean up on unmount
       return () => map.remove();
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
@@ -59,3 +60,5 @@ const Map = () => {
       </div>
     );
   };
+
+  export default Map;
