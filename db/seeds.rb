@@ -6,13 +6,14 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+puts "Starting seed"
 
 User.create(username: 'riverkanterman', password_digest: 'harmredux')
 User.create(username: 'brooklynmedic', password_digest: 'mutualaid')
 
 #Location Seeds
-13AvenuePharmacy = Location.create(name: "13th Avenue Pharmacy", address: "5211 13th Avenue Brooklyn 11209", phone: "(718) 871-9777)", latitude: '40.63316144897959' , longitude: '-73.99392118367346')
-21AvenuePharmacy = Location.create(name: "21 Avenue Pharmacy and Medical Supply", address: "8511 21st Avenue Brooklyn 11214", phone: "(718) 449-4949", latitude: '40.603499799999994', longitude: '-73.99550259397196')
+ThirteenAvenuePharmacy = Location.create(name: "13th Avenue Pharmacy", address: "5211 13th Avenue Brooklyn 11209", phone: "(718) 871-9777)", latitude: '40.63316144897959' , longitude: '-73.99392118367346')
+TwentyOneAvenuePharmacy = Location.create(name: "21 Avenue Pharmacy and Medical Supply", address: "8511 21st Avenue Brooklyn 11214", phone: "(718) 449-4949", latitude: '40.603499799999994', longitude: '-73.99550259397196')
 AGPharmacy = Location.create(name: "A & G Pharmacy", address: "1216 Neptune Avenue Brooklyn 11224 ", phone: "(718) 996-2277", latitude: '40.57933102020203', longitude: '-73.97987617171717')
 AHPharmacy = Location.create(name: "A & H Pharmacy", address: "589 Crescent Street Brooklyn 11208", phone: "(718) 277-0573", latitude: '40.673491291666664', longitude: '-73.86942125')
 ABCPharmacy = Location.create(name: "ABC Pharmacy", address: "371 McDonald Avenue Brooklyn 11218 ", phone: "(718) 853-7766", latitude: '40.6449156', longitude: '-73.9796418')
@@ -36,7 +37,9 @@ CareMaxPharmacy = Location.create(name: "Care Max Pharmacy", address: "6721 Fort
 CarePlusPharmacy = Location.create(name: "Care Plus Pharmacy", address: "7010 18th Avenue Brooklyn 11204", phone: "(718) 256-4886", latitude: '40.6161165', longitude: '-73.9934384')
 CentralAvePharmacy = Location.create(name: "Central Ave Pharmacy", address: "334B Central Avenue Brooklyn 11221", phone: "(718) 942-5855", latitude: '40.702431', longitude: '-73.932792')
 
-Review.create(username: "riverkanterman", review: "They had plenty of naloxone in stock and the pharmacist was very friendly.", location_id:'CentralAvePharmacy')
-Review.create(username: "riverkanterman", review: "Didn't have any naloxone in stock as of 7/21/22.", location_id:'BrightonRX')
-Review.create(username: "brooklynmedic", review: "Had naloxone and gave additional resources/reading material", location_id:'CareFastPharmacy')
-Review.create(username: "brooklynmedic", review: "Did not know what naloxone was, said they never carried it.", location_id:'BestCarePharmacy')
+#Review.create(user_id: 1, comment: "They had plenty of naloxone in stock and the pharmacist was very friendly.", location_id:'CentralAvePharmacy')
+#Review.create(user_id: 1, comment: "Didn't have any naloxone in stock as of 7/21/22.", location_id:'BrightonRX')
+#Review.create(user_id: 2, comment: "Had naloxone and gave additional resources/reading material", location_id:'CareFastPharmacy')
+#Review.create(user_id: 2, comment: "Did not know what naloxone was, said they never carried it.", location_id:'BestCarePharmacy')
+
+puts "Finished planting seed data!"
